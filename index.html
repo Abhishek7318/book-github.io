@@ -36,12 +36,15 @@
   <div class="user flex">
    <img class="user_ditail_icon" src="assets/download (3).jpg" alt="">
     <div class="upload_text_area flex">
-      <input class="text_area" placeholder="say something... !" type="text">
-      <button class="post">post</button>
+      <input class="text_area" id="postText" placeholder="say something... !" type="text">
+      <button class="post" onclick="addpost()">post</button>
     </div>
   </div>
+  <div class="upload_post" id="posts">
+  
+  </div>
 </div>
-    <!-- main section  -->
+    <!-- main section  by user upload post -->
 
    <!-- main section  -->
    <div class="user_part">
@@ -53,9 +56,10 @@
     <div class="img">
         <img class="content" src="assets/download (3).jpg" alt="">
         <div class="flex">
-            <img class="like" src="assets/thumbs-up-regular.svg" alt="">
-           <img class="like comment" src="assets/comment-solid.svg" alt="">
-        </div>
+          <img class="like" onclick="like()" src="assets/thumbs-up-regular.svg" alt="">
+         <img class="like_comment" onclick="Comments()" src="assets/comment-solid.svg" alt="">
+      </div>
+      <div><p id="result">Likes: 0 | comment: 0</p></div>
     </div>
    </div>
 <hr class="hr">
@@ -71,9 +75,10 @@
     <div class="img">
         <img class="content" src="assets/download (3).jpg" alt="">
         <div class="flex">
-            <img class="like" src="assets/thumbs-up-regular.svg" alt="">
-           <img class="like comment" src="assets/comment-solid.svg" alt="">
+            <img class="like" onclick="likee()" src="assets/thumbs-up-regular.svg" alt="">
+           <img class="like_comment" onclick="Comments()" src="assets/comment-solid.svg" alt="">
         </div>
+        <div><p id="result">Likes: 0 | comment: 0</p></div>
     </div>
    </div>
 <hr class="hr">
@@ -90,75 +95,14 @@
         <img class="content" src="assets/download (3).jpg" alt="">
         <div class="flex">
             <img class="like" src="assets/thumbs-up-regular.svg" alt="">
-           <img class="like comment" src="assets/comment-solid.svg" alt="">
+           <img class="like_comment" src="assets/comment-solid.svg" alt="">
         </div>
     </div>
    </div>
 <hr class="hr">
    <!-- main section  -->
-   <div class="user_part">
-    <div class="userdetail flex">
-      <img class="user_ditail_icon" src="assets/download (3).jpg" alt="">
-      <h3>Rohan</h3>
-      <img class="three_dot" src="assets/ellipsis-vertical-solid.svg" height="20px" alt="">
-    </div>
-    <div class="img">
-        <img class="content" src="assets/download (3).jpg" alt="">
-        <div class="flex">
-            <img class="like" src="assets/thumbs-up-regular.svg" alt="">
-           <img class="like comment" src="assets/comment-solid.svg" alt="">
-        </div>
-    </div>
-   </div>
-<hr class="hr">
-   <!-- main section  -->
-   <div class="user_part">
-    <div class="userdetail flex">
-      <img class="user_ditail_icon" src="assets/download (3).jpg" alt="">
-      <h3>Suryansh </h3>
-      <img class="three_dot" src="assets/ellipsis-vertical-solid.svg" height="20px" alt="">
-    </div>
-    <div class="img">
-        <img class="content" src="assets/download (3).jpg" alt="">
-        <div class="flex">
-            <img class="like" src="assets/thumbs-up-regular.svg" alt="">
-           <img class="like comment" src="assets/comment-solid.svg" alt="">
-        </div>
-    </div>
-   </div>
-<hr class="hr">
-   <!-- main section  -->
-   <div class="user_part">
-    <div class="userdetail flex">
-      <img class="user_ditail_icon" src="assets/download (3).jpg" alt="">
-      <h3>pradyum </h3>
-      <img class="three_dot" src="assets/ellipsis-vertical-solid.svg" height="20px" alt="">
-    </div>
-    <div class="img">
-        <img class="content" src="assets/download (3).jpg" alt="">
-        <div class="flex">
-            <img class="like" src="assets/thumbs-up-regular.svg" alt="">
-           <img class="like comment" src="assets/comment-solid.svg" alt="">
-        </div>
-    </div>
-   </div>
-<hr class="hr">
-   <!-- main section  -->
-   <div class="user_part">
-    <div class="userdetail flex">
-      <img class="user_ditail_icon" src="assets/download (3).jpg" alt="">
-      <h3>Abhishek Verma </h3>
-      <img class="three_dot" src="assets/ellipsis-vertical-solid.svg" height="20px" alt="">
-    </div>
-    <div class="img">
-        <img class="content" src="assets/download (3).jpg" alt="">
-        <div class="flex">
-            <img class="like" src="assets/thumbs-up-regular.svg" alt="">
-           <img class="like comment" src="assets/comment-solid.svg" alt="">
-        </div>
-    </div>
-   </div>
-<hr class="hr">
+
+
 <script src="script.js"></script>
 </body>
 </html>
