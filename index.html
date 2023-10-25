@@ -6,12 +6,12 @@
     <link rel="stylesheet" href="style.css" />
     <title>BookFriends</title>
   </head>
-  <body>
+  <body class="dark_mode">
     <!-- nav section  -->
     <div class="nav_section">
       <nav>
         <ul>
-          <li class="icon">book</li>
+          <li class="icon"><span>B</span>ook</li>
           <li class="home">
             <img src="assets/house-solid.svg" height="20px" alt="" />
           </li>
@@ -26,11 +26,128 @@
           </li>
           <div class="profile">
             <div class="online"></div>
-            <img src="assets/download (3).jpg" height="60px" />
+            <img src="assets/download (3).jpg" onclick="openDrawer()" height="60px" />
           </div>
         </ul>
       </nav>
+      <div class="profile_drower">
+        <div class="flex mode_box">
+          <h5 class="h5">mode</h5>
+          <label class="switch">
+            <input type="checkbox" id="toggle">
+            <span class="slider"></span>
+            
+          </label>
+        </div>
+        <div class="back  ">
+          <h5 class="h5 hh">
+            back
+          </h5>
+        </div>
+       
+
+      </div>
     </div>
+<!-- user stories section  -->
+<div class="stories-container">
+  <div class="content">
+    <div class="previous-btn">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="w-6 h-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M15.75 19.5L8.25 12l7.5-7.5"
+        />
+      </svg>
+    </div>
+
+    <div class="stories"></div>
+
+    <div class="next-btn active">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="w-6 h-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M8.25 4.5l7.5 7.5-7.5 7.5"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
+
+<div class="stories-full-view">
+  <div class="close-btn">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      class="w-6 h-6"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M6 18L18 6M6 6l12 12"
+      />
+    </svg>
+  </div>
+
+  <div class="content">
+    <div class="previous-btn">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="w-6 h-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M15.75 19.5L8.25 12l7.5-7.5"
+        />
+      </svg>
+    </div>
+
+    <div class="story">
+      <img src="storyiesimg/1.jpg" alt="" />
+      <div class="author">Author</div>
+    </div>
+
+    <div class="next-btn">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="w-6 h-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M8.25 4.5l7.5 7.5-7.5 7.5"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
 <!-- user upload photo section -->
 <div class="upload_photo_section">
   <div class="user flex">
@@ -44,6 +161,7 @@
   
   </div>
 </div>
+<hr class="hr">
     <!-- main section  by user upload post -->
 
    <!-- main section  -->
@@ -54,7 +172,7 @@
       <img class="three_dot" src="assets/ellipsis-vertical-solid.svg" height="20px" alt="">
     </div>
     <div class="img">
-        <img class="content" src="assets/download (3).jpg" alt="">
+        <img class="content" src="herosimg/IMG-20230818-WA0005 (1).jpg" alt="">
         <div class="flex">
           <img class="like" onclick="like()" src="assets/thumbs-up-regular.svg" alt="">
          <img class="like_comment" onclick="Comments()" src="assets/comment-solid.svg" alt="">
@@ -73,9 +191,9 @@
       <img class="three_dot" src="assets/ellipsis-vertical-solid.svg" height="20px" alt="">
     </div>
     <div class="img">
-        <img class="content" src="assets/download (3).jpg" alt="">
+        <img class="content" src="herosimg/IMG-20230821-WA0001~2.jpg" alt="">
         <div class="flex">
-            <img class="like" onclick="likee()" src="assets/thumbs-up-regular.svg" alt="">
+            <img class="like" onclick="like()" src="assets/thumbs-up-regular.svg" alt="">
            <img class="like_comment" onclick="Comments()" src="assets/comment-solid.svg" alt="">
         </div>
         <div><p id="result">Likes: 0 | comment: 0</p></div>
@@ -92,17 +210,32 @@
       <img class="three_dot" src="assets/ellipsis-vertical-solid.svg" height="20px" alt="">
     </div>
     <div class="img">
-        <img class="content" src="assets/download (3).jpg" alt="">
+        <img class="content" src="herosimg/IMG-20230911-WA0011.jpg" alt="">
         <div class="flex">
-            <img class="like" src="assets/thumbs-up-regular.svg" alt="">
+            <img class="like" onclick="like()" src="assets/thumbs-up-regular.svg" alt="">
            <img class="like_comment" src="assets/comment-solid.svg" alt="">
         </div>
     </div>
    </div>
 <hr class="hr">
+<div class="user_part">
+  <div class="userdetail flex">
+    <img class="user_ditail_icon" src="assets/download (3).jpg" alt="">
+    <h3>priyanshu Verma </h3>
+    <img class="three_dot" src="assets/ellipsis-vertical-solid.svg" height="20px" alt="">
+  </div>
+  <div class="img">
+      <img class="content" src="herosimg/IMG-20230923-WA0000.jpg" alt="">
+      <div class="flex">
+          <img class="like" onclick="like()" src="assets/thumbs-up-regular.svg" alt="">
+         <img class="like_comment" src="assets/comment-solid.svg" alt="">
+      </div>
+  </div>
+ </div>
    <!-- main section  -->
 
 
 <script src="script.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
